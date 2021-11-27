@@ -1,0 +1,16 @@
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.exe
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.deps.json
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.runtimeconfig.json
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.runtimeconfig.dev.json
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.dll
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ref\ServiceRegisterer.dll
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\bin\Debug\net5.0\ServiceRegisterer.pdb
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.csproj.AssemblyReference.cache
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.AssemblyInfoInputs.cache
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.AssemblyInfo.cs
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.csproj.CoreCompileInputs.cache
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.dll
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ref\ServiceRegisterer.dll
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.pdb
+C:\Users\usvameria\source\repos\ServiceRegisterer\ServiceRegisterer\obj\Debug\net5.0\ServiceRegisterer.genruntimeconfig.cache
