@@ -8,6 +8,7 @@ namespace ServiceRegisterer
     {
         static void Main(string[] args)
         {
+            //TODO: service start type is will be selectable
             try
             {
                 START:
@@ -24,7 +25,7 @@ namespace ServiceRegisterer
                     {
                         Console.WriteLine("Enter a service directory");
                         string serviceDirectory = Console.ReadLine();
-                        RegisterService(serviceName, serviceDirectory);
+                        ServiceAction(serviceName, serviceDirectory, "create");
                     }
                     else
                         goto RNAME;
@@ -36,7 +37,7 @@ namespace ServiceRegisterer
                     Console.WriteLine("Enter a service name: ");
                     serviceName = Console.ReadLine();
                     if(serviceName != "")
-                        DeleteService(serviceName);
+                        ServiceAction(serviceName,null, action:"delete");
                     else
                         goto DNAME;
                 }
@@ -46,7 +47,7 @@ namespace ServiceRegisterer
                     Console.WriteLine("Enter a service name: ");
                     serviceName = Console.ReadLine();
                     if (serviceName != "")
-                        StartService(serviceName);
+                        ServiceAction(serviceName,null, action:"start");
                     else
                         goto SNAME;
                 }
@@ -56,7 +57,7 @@ namespace ServiceRegisterer
                     Console.WriteLine("Enter a service name: ");
                     serviceName = Console.ReadLine();
                     if (serviceName != "")
-                        StopService(serviceName);
+                        ServiceAction(serviceName,null, action:"stop");
                     else
                         goto STSNAME;
                 }
@@ -74,55 +75,24 @@ namespace ServiceRegisterer
 
         }
     
-        static void RegisterService(string serviceName, string serviceDirectory)
+        static void ServiceAction(string serviceName, string serviceDirectory, string action)
         {
-
             Process proc = new Process(); //call new Process
             ProcessStartInfo info = new ProcessStartInfo(); //call new ProcessStartInfo
-            info.Arguments = string.Format(@"create {0} binpath={1} start=auto",serviceName,serviceDirectory); //set the arguments)
+            
+            if (action == "create" || action == "c")
+            {
+                info.Arguments = string.Format(@"{0} {1} binpath={2} start=auto", action, serviceName, serviceDirectory);//set the arguments)
+
+            }
+            else
+                info.Arguments = string.Format(@"{0} {1} ",action, serviceName); //set the arguments)
             info.FileName = "sc.exe"; //set the file name (location)
             info.UseShellExecute = true;
             info.Verb = "runas";
             proc.StartInfo = info; //put the StartInfo into the Procces method
             proc.Start(); //Start the procces (sc.exe with the arguments)
             proc.WaitForExit(); //waits till the procces is done
-        }
-        static void DeleteService(string serviceName)
-        {
-
-            Process proc = new Process(); 
-            ProcessStartInfo info = new ProcessStartInfo(); 
-            info.Arguments = string.Format(@"delete {0}", serviceName);
-            info.FileName = "sc.exe"; 
-            info.UseShellExecute = true;
-            info.Verb = "runas";
-            proc.StartInfo = info; 
-            proc.Start(); 
-            proc.WaitForExit(); 
-        }
-        static void StartService(string serviceName)
-        {
-            Process proc = new Process();
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.Arguments = string.Format(@"start {0}", serviceName);
-            info.FileName = "sc.exe";
-            info.UseShellExecute = true;
-            info.Verb = "runas";
-            proc.StartInfo = info;
-            proc.Start();
-            proc.WaitForExit(); 
-        }
-        static void StopService(string serviceName)
-        {
-            Process proc = new Process();
-            ProcessStartInfo info = new ProcessStartInfo();
-            info.Arguments = string.Format(@"stop {0}", serviceName);
-            info.FileName = "sc.exe";
-            info.UseShellExecute = true;
-            info.Verb = "runas";
-            proc.StartInfo = info;
-            proc.Start();
-            proc.WaitForExit();
         }
     }
 }
